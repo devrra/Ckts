@@ -9,3 +9,11 @@ git commit -m "adding CommonSource file"
 git remote add origin https://github.com/devrra/LtspiceCkts.git
 git remote
 git push origin master
+
+
+
+To delete a file/folder
+------------------------
+git rm New.txt
+git commit -m"New.txt deleted"
+git push origin master
