@@ -1,0 +1,11 @@
+git init
+git status
+git add CommonSource/
+git status
+git config --global user.email "yashr2192@gmail.com"
+git config --global user.name "Yash Raj"
+git config --list
+git commit -m "adding CommonSource file"
+git remote add origin https://github.com/devrra/LtspiceCkts.git
+git remote
+git push origin master
