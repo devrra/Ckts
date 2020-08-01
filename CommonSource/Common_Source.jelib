@@ -1,0 +1,58 @@
+# header information:
+HCommon_Source|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D26.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+Tmocmos-cn|ScaleFORmocmos-cn()D65.0
+
+# Cell CS_CSL;1{sch}
+CCS_CSL;1{sch}||schematic|1596277451029|1596277467675|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NTransistor|nmos@0||-1|-5|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NTransistor|pmos@0||-1|4|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+X
+
+# Cell simpleCS;1{sch}
+CsimpleCS;1{sch}||schematic|1596243737942|1596277083252|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||3|-5||||
+NOff-Page|conn@1||16|0||||
+NOff-Page|conn@2||-10|-5||||
+NGround|gnd@0||11|-11||||
+NTransistor|nmos@0||9|-5|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S5|ATTR_width(D5G1;X0.5;Y-1;)S5|SIM_spice_model(D5G1;X-2;)SNMOS
+NWire_Pin|pin@1||11|0||||
+Ngeneric:Invisible-Pin|pin@2||-7|5|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\130nm.cir",Rd vdd out 16k,R1 vdd b 100k,R2 b 0 200k,Cin in b 0.1uF,Vvdd vdd 0 1.2,Vin in 0 sin(0 50m 10k),.tran 10u 0.5m]
+NPower|pwr@0||11|6||||
+Awire|net@1|||900|nmos@0|s|11|-7|gnd@0||11|-9
+Awire|net@3|||2700|nmos@0|d|11|-3|pin@1||11|0
+Awire|net@4|||1800|pin@1||11|0|conn@1|a|14|0
+Awire|net@5|||1800|conn@0|y|5|-5|nmos@0|g|8|-5
+Ein|b|D5G2;|conn@0|a|U
+Ein@834169417|in|D5G2;|conn@2|a|U
+Eout||D5G2;|conn@1|y|U
+X
+
+# Cell test;1{sch}
+Ctest;1{sch}||schematic|1596269149284|1596271053221|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||6|2||||
+NOff-Page|conn@1||-11|-1||||
+NGround|gnd@0||-3|-7||||
+NTransistor|nmos@0||-5|-1|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
+Ngeneric:Invisible-Pin|pin@2||-25|7|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\65nm.cir",Vvdd vdd 0 1.2,Vin in 0 1,R vdd out 2k,.dc Vin 0 1.2 0.1]
+NWire_Pin|pin@3||1|2||||
+NWire_Pin|pin@4||-3|2||||
+NWire_Pin|pin@5||-8|-1||||
+NPower|pwr@0||-3|8||||
+Awire|net@5|||0|conn@0|a|4|2|pin@3||1|2
+Awire|net@6|||900|nmos@0|s|-3|-3|gnd@0||-3|-5
+Awire|net@7|||2700|nmos@0|d|-3|1|pin@4||-3|2
+Awire|net@8|||0|pin@3||1|2|pin@4||-3|2
+Awire|net@9|||0|nmos@0|g|-6|-1|pin@5||-8|-1
+Awire|net@10|||1800|conn@1|y|-9|-1|pin@5||-8|-1
+Ein||D5G2;|conn@1|a|U
+Eout||D5G2;|conn@0|a|U
+X
