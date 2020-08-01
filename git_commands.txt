@@ -17,3 +17,8 @@ To delete a file/folder
 git rm New.txt
 git commit -m"New.txt deleted"
 git push origin master
+
+To push all changes
+--------------------
+git commit -a -m"comments"
+git push origin master
