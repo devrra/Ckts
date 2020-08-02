@@ -20,5 +20,6 @@ git push origin master
 
 To push all changes
 --------------------
-git commit -a -m"comments"
+git add .
+git commit -m"comments"
 git push origin master
