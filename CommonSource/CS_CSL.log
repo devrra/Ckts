@@ -1,0 +1,21 @@
+Circuit: *** SPICE deck for cell CS_CSL{sch} from library Common_Source
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Aug 02 06:13:28 2020
+Total elapsed time: 0.054 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2092
+traniter = 2083
+tranpoints = 1042
+accept = 1042
+rejected = 0
+matrix size = 16
+fillins = 0
+solver = Normal
+Matrix Compiler1: 1.28 KB object code size  0.4/0.2/[0.1]
+Matrix Compiler2: 1.52 KB object code size  0.2/0.3/[0.2]
+

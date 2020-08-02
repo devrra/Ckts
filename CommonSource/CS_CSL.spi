@@ -1,0 +1,27 @@
+*** SPICE deck for cell CS_CSL{sch} from library Common_Source
+*** Created on Sat Aug 01, 2020 15:54:11
+*** Last revised on Sun Aug 02, 2020 04:03:13
+*** Written on Sun Aug 02, 2020 04:03:21 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: CS_CSL{sch}
+Mnmos@0 out B1 gnd gnd NMOS L=0.13U W=0.13U
+Mpmos@0 vdd B2 out vdd PMOS L=0.13U W=0.26U
+
+* Spice Code nodes in cell cell 'CS_CSL{sch}'
+.include C:\Users\Yash Raj\Documents\electric\65nm.cir
+R1 vdd B1 100k
+R2 B1 0 200k
+Rload out 0 1meg
+Cin in B1 0.1uF
+Vvdd vdd 0 1.2
+Vb2 B2 0 -0.2
+Vin in 0 sin(0 50m 10k)
+.tran 1u 0.5m
+*Vin B1 0 1
+*.dc Vin 0 1.2 0.01
+*.op
+.END
