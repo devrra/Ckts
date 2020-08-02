@@ -9,7 +9,7 @@ Tmocmos|ScaleFORmocmos()D26.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
 Tmocmos-cn|ScaleFORmocmos-cn()D65.0
 
 # Cell CS_CSL;1{sch}
-CCS_CSL;1{sch}||schematic|1596277451029|1596321193221|
+CCS_CSL;1{sch}||schematic|1596277451029|1596340982980|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||6|0||||
 NOff-Page|conn@1||-8|-5||||
@@ -18,7 +18,7 @@ NOff-Page|conn@3||-8|4||||
 NGround|gnd@0||1|-11||||
 NTransistor|nmos@0||-1|-5|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
 NWire_Pin|pin@1||1|0||||
-Ngeneric:Invisible-Pin|pin@2||-29|6|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\130nm.cir",R1 vdd B1 100k,R2 B1 0 200k,Rload out 0 1meg,Cin in B1 0.1uF,Vvdd vdd 0 1.2,Vb2 B2 0 1,Vin in 0 sin(0 50m 10k),.tran 10u 0.5m]
+Ngeneric:Invisible-Pin|pin@2||-29|6|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\130nm.cir",Vvdd vdd 0 1.2,Vb2 B2 0 1.1,R1 vdd B1 1100k,R2 B1 0 100k,Cin in B1 0.1uF,Vin in 0 sin(0 50m 10k),.tran 10u 0.5m,*Vin B1 0 0,*.dc Vin 0 1.2 0.01]
 NTransistor|pmos@0||-1|4|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S4|SIM_spice_model(D5G1;X-2;)SPMOS
 NPower|pwr@0||1|9||||
 Awire|net@2|||900|pwr@0||1|9|pmos@0|d|1|6
@@ -55,13 +55,14 @@ Eout||D5G2;|conn@1|y|U
 X
 
 # Cell test;1{sch}
-Ctest;1{sch}||schematic|1596269149284|1596271053221|
+Ctest;1{sch}||schematic|1596269149284|1596338066296|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||6|2||||
 NOff-Page|conn@1||-11|-1||||
+NOff-Page|conn@2||-26|-1||||
 NGround|gnd@0||-3|-7||||
-NTransistor|nmos@0||-5|-1|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
-Ngeneric:Invisible-Pin|pin@2||-25|7|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\65nm.cir",Vvdd vdd 0 1.2,Vin in 0 1,R vdd out 2k,.dc Vin 0 1.2 0.1]
+NTransistor|nmos@0||-5|-1|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S20|SIM_spice_model(D5G1;X-2;)SNMOS
+Ngeneric:Invisible-Pin|pin@2||-26|5|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\65nm.cir",Vvdd vdd 0 1.2,R1 vdd B 100k,R2 B 0 126k,Vin in 0 sin(0 50m 10k),C in B 0.1uF,R vdd out 2k,.tran 10u 0.5m,*.dc Vin 0 1.2 0.1]
 NWire_Pin|pin@3||1|2||||
 NWire_Pin|pin@4||-3|2||||
 NWire_Pin|pin@5||-8|-1||||
@@ -72,6 +73,7 @@ Awire|net@7|||2700|nmos@0|d|-3|1|pin@4||-3|2
 Awire|net@8|||0|pin@3||1|2|pin@4||-3|2
 Awire|net@9|||0|nmos@0|g|-6|-1|pin@5||-8|-1
 Awire|net@10|||1800|conn@1|y|-9|-1|pin@5||-8|-1
-Ein||D5G2;|conn@1|a|U
+Ein|B|D5G2;|conn@1|a|U
+Ein@870128231|in|D5G2;|conn@2|a|U
 Eout||D5G2;|conn@0|a|U
 X
