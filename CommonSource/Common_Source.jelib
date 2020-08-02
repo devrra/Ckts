@@ -9,10 +9,29 @@ Tmocmos|ScaleFORmocmos()D26.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
 Tmocmos-cn|ScaleFORmocmos-cn()D65.0
 
 # Cell CS_CSL;1{sch}
-CCS_CSL;1{sch}||schematic|1596277451029|1596277467675|
+CCS_CSL;1{sch}||schematic|1596277451029|1596321193221|
 Ngeneric:Facet-Center|art@0||0|0||||AV
-NTransistor|nmos@0||-1|-5|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
-NTransistor|pmos@0||-1|4|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NOff-Page|conn@0||6|0||||
+NOff-Page|conn@1||-8|-5||||
+NOff-Page|conn@2||-20|-5||||
+NOff-Page|conn@3||-8|4||||
+NGround|gnd@0||1|-11||||
+NTransistor|nmos@0||-1|-5|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
+NWire_Pin|pin@1||1|0||||
+Ngeneric:Invisible-Pin|pin@2||-29|6|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\130nm.cir",R1 vdd B1 100k,R2 B1 0 200k,Rload out 0 1meg,Cin in B1 0.1uF,Vvdd vdd 0 1.2,Vb2 B2 0 1,Vin in 0 sin(0 50m 10k),.tran 10u 0.5m]
+NTransistor|pmos@0||-1|4|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S4|SIM_spice_model(D5G1;X-2;)SPMOS
+NPower|pwr@0||1|9||||
+Awire|net@2|||900|pwr@0||1|9|pmos@0|d|1|6
+Awire|net@3|||900|pmos@0|s|1|2|pin@1||1|0
+Awire|net@4|||900|pin@1||1|0|nmos@0|d|1|-3
+Awire|net@5|||1800|pin@1||1|0|conn@0|a|4|0
+Awire|net@6|||1800|conn@1|y|-6|-5|nmos@0|g|-2|-5
+Awire|net@8|||1800|conn@3|y|-6|4|pmos@0|g|-2|4
+Awire|net@9|||900|nmos@0|s|1|-7|gnd@0||1|-9
+EB|B1|D5G2;|conn@1|a|U
+EB2||D5G2;|conn@3|a|U
+Ein||D5G2;|conn@2|a|U
+Eout||D5G2;|conn@0|a|U
 X
 
 # Cell simpleCS;1{sch}
