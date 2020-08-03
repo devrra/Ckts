@@ -1,0 +1,31 @@
+# header information:
+HCommonGate|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D26.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+Tmocmos-cn|ScaleFORmocmos-cn()D65.0
+
+# Cell simpleCG;1{sch}
+CsimpleCG;1{sch}||schematic|1596342536583|1596343488520|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-9|0||||
+NOff-Page|conn@1||-1|-7||||
+NOff-Page|conn@2||9|4||||
+NGround|gnd@0||-10|-10||||
+NTransistor|nmos@0||0|0|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
+NWire_Pin|pin@0||2|4||||
+NWire_Pin|pin@1||2|-7||||
+Ngeneric:Invisible-Pin|pin@2||-25|4|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\130nm.cir",Vvdd vdd 0 1.2,R vdd out 1k,Vb b 0 0,Vin in 0 0,.dc Vin 0 1.2 0.1]
+NPower|pwr@0||2|9||||
+Awire|net@0|||2700|nmos@0|d|2|2|pin@0||2|4
+Awire|net@1|||1800|pin@0||2|4|conn@2|a|7|4
+Awire|net@2|||1800|conn@0|y|-7|0|nmos@0|g|-1|0
+Awire|net@3|||1800|conn@1|y|1|-7|pin@1||2|-7
+Awire|net@4|||900|nmos@0|s|2|-2|pin@1||2|-7
+EB||D5G2;|conn@0|y|U
+Ein||D5G2;|conn@1|y|U
+Eout||D5G2;|conn@2|a|U
+X

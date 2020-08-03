@@ -1,0 +1,20 @@
+*** SPICE deck for cell test{sch} from library CommonGate
+*** Created on Sun Aug 02, 2020 09:58:56
+*** Last revised on Mon Aug 03, 2020 08:55:15
+*** Written on Mon Aug 03, 2020 09:18:04 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: test{sch}
+Mnmos@0 out B in gnd NMOS L=0.13U W=0.13U
+
+* Spice Code nodes in cell cell 'test{sch}'
+.include C:\Users\Yash Raj\Documents\electric\130nm.cir
+Vvdd vdd 0 1.2
+R vdd out 30k
+Vb b 0 1
+Vin in 0 0
+.dc Vin 0 0.8 0.01
+.END

@@ -1,0 +1,20 @@
+*** SPICE deck for cell simpleCG{sch} from library CommonGate
+*** Created on Sun Aug 02, 2020 09:58:56
+*** Last revised on Sun Aug 02, 2020 10:14:48
+*** Written on Sun Aug 02, 2020 10:14:53 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: simpleCG{sch}
+Mnmos@0 out B in gnd NMOS L=0.13U W=1.3U
+
+* Spice Code nodes in cell cell 'simpleCG{sch}'
+.include C:\Users\Yash Raj\Documents\electric\130nm.cir
+Vvdd vdd 0 1.2
+R vdd out 10k
+Vb b 0 1
+Vin in 0 0
+.dc Vin 0 1.2 0.01
+.END
