@@ -1,0 +1,79 @@
+# header information:
+HSourceFollower|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D26.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+Tmocmos-cn|ScaleFORmocmos-cn()D65.0
+
+# Cell CSL_SF;1{sch}
+CCSL_SF;1{sch}||schematic|1596600286633|1596601973998|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@2||24|0||||
+NOff-Page|conn@3||36|-5||||
+NOff-Page|conn@4||24|-8||||
+NOff-Page|conn@5||17|0||||
+NGround|gnd@1||31|-13||||
+NTransistor|nmos@2||29|0|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
+NTransistor|nmos@3||29|-8|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
+NWire_Pin|pin@2||31|-5||||
+Ngeneric:Invisible-Pin|pin@3||10|-2|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\130nm.cir",Vvdd vdd 0 1.2,R1 vdd b2 1k,R2 b2 0 1k,R3 vdd b1 1k,R4 b1 0 1k,Cin in b1 0.1uF,Vin in 0 sin(0 50m 10k),.tran 10u 0.5m]
+NPower|pwr@1||31|7||||
+Awire|net@6|||1800|conn@4|y|26|-8|nmos@3|g|28|-8
+Awire|net@7|||2700|nmos@2|d|31|2|pwr@1||31|7
+Awire|net@8|||900|nmos@2|s|31|-2|pin@2||31|-5
+Awire|net@9|||1800|pin@2||31|-5|conn@3|a|34|-5
+Awire|net@10|||1800|conn@2|y|26|0|nmos@2|g|28|0
+Awire|net@11|||2700|nmos@3|d|31|-6|pin@2||31|-5
+Awire|net@12|||900|nmos@3|s|31|-10|gnd@1||31|-11
+Eb1||D5G2;|conn@2|a|U
+Eb2||D5G2;|conn@4|y|U
+Ein||D5G2;|conn@5|a|U
+Eout||D5G2;|conn@3|y|U
+X
+
+# Cell simpleSF;1{sch}
+CsimpleSF;1{sch}||schematic|1596600011861|1596600214834|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-1|1||||
+NOff-Page|conn@1||11|-4||||
+NOff-Page|conn@2||-10|1||||
+NGround|gnd@0||6|-11||||
+NTransistor|nmos@0||4|1|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
+NWire_Pin|pin@0||6|-4||||
+Ngeneric:Invisible-Pin|pin@1||-12|9|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\130nm.cir",Vvdd vdd 0 1.2,Rs out 0 10k,Cin in b 0.1uF,Vin in 0 sin(0 50m 10k),.tran 10u 0.5m]
+NPower|pwr@0||6|8||||
+Awire|net@0|||2700|nmos@0|d|6|3|pwr@0||6|8
+Awire|net@1|||900|nmos@0|s|6|-1|pin@0||6|-4
+Awire|net@2|||1800|pin@0||6|-4|conn@1|a|9|-4
+Awire|net@3|||1800|conn@0|y|1|1|nmos@0|g|3|1
+Eb||D5G2;|conn@0|a|U
+Ein||D5G2;|conn@2|y|U
+Eout||D5G2;|conn@1|a|U
+X
+
+# Cell test;1{sch}
+Ctest;1{sch}||schematic|1596598841678|1596600685600|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@1||-6|0||||
+NOff-Page|conn@2||6|-5||||
+NOff-Page|conn@3||-6|-8||||
+NGround|gnd@0||1|-13||||
+NTransistor|nmos@0||-1|0|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
+NTransistor|nmos@1||-1|-8|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
+NWire_Pin|pin@0||1|-5||||
+Ngeneric:Invisible-Pin|pin@1||-17|8|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\130nm.cir",Vvdd vdd 0 1.2,Vb b2 0 1,Rs out 0 10k,Vin in 0 0,.dc Vin 0 1.2 0.1]
+NPower|pwr@0||1|7||||
+Awire|net@0|||2700|nmos@0|d|1|2|pwr@0||1|7
+Awire|net@1|||900|nmos@0|s|1|-2|pin@0||1|-5
+Awire|net@4|||1800|pin@0||1|-5|conn@2|a|4|-5
+Awire|net@5|||1800|conn@1|y|-4|0|nmos@0|g|-2|0
+Awire|net@6|||2700|nmos@1|d|1|-6|pin@0||1|-5
+Awire|net@7|||900|nmos@1|s|1|-10|gnd@0||1|-11
+Awire|net@8|||1800|conn@3|y|-4|-8|nmos@1|g|-2|-8
+Eb2||D5G2;|conn@3|y|U
+Ein||D5G2;|conn@1|a|U
+Eout||D5G2;|conn@2|y|U
+X

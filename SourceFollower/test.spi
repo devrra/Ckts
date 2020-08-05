@@ -1,0 +1,21 @@
+*** SPICE deck for cell test{sch} from library SourceFollower
+*** Created on Wed Aug 05, 2020 09:10:41
+*** Last revised on Wed Aug 05, 2020 09:41:25
+*** Written on Wed Aug 05, 2020 09:57:15 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: test{sch}
+Mnmos@0 vdd in out gnd NMOS L=0.13U W=0.13U
+Mnmos@1 out b2 gnd gnd NMOS L=0.13U W=0.13U
+
+* Spice Code nodes in cell cell 'test{sch}'
+.include C:\Users\Yash Raj\Documents\electric\130nm.cir
+Vvdd vdd 0 1.2
+Vb b2 0 0.3
+Rs out 0 10k
+Vin in 0 0
+.dc Vin 0 1.2 0.1
+.END

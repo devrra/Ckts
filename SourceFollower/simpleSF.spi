@@ -1,0 +1,20 @@
+*** SPICE deck for cell simpleSF{sch} from library SourceFollower
+*** Created on Wed Aug 05, 2020 09:30:11
+*** Last revised on Wed Aug 05, 2020 09:33:34
+*** Written on Wed Aug 05, 2020 09:33:39 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: simpleSF{sch}
+Mnmos@0 vdd b out gnd NMOS L=0.13U W=1.3U
+
+* Spice Code nodes in cell cell 'simpleSF{sch}'
+.include C:\Users\Yash Raj\Documents\electric\130nm.cir
+Vvdd vdd 0 1.2
+Rs out 0 10k
+Cin in b 0.1uF
+Vin in 0 sin(0 50m 10k)
+.tran 10u 0.5m
+.END
