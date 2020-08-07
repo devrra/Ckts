@@ -1,0 +1,27 @@
+*** SPICE deck for cell Wilson_CM{sch} from library CurrentMirror
+*** Created on Fri Aug 07, 2020 14:50:36
+*** Last revised on Fri Aug 07, 2020 14:58:49
+*** Written on Fri Aug 07, 2020 14:59:19 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Wilson_CM{sch}
+Mnmos@0 d1 d2 gnd gnd NMOS L=0.13U W=0.65U
+Mnmos@1 d2 d2 gnd gnd NMOS L=0.13U W=0.65U
+
+* Spice Code nodes in cell cell 'Wilson_CM{sch}'
+.include C:\Users\Yash Raj\Documents\electric\130nm.cir
+Vvdd vdd 0 1.2
+
+.params Rres=1k
+Rl vdd d1 {Rres}
+.step param Rres 50 1000 100
+
+.params i=10u
+Iref vdd d2 {i}
+.step param i 10u 200u 10u
+
+.op
+.END

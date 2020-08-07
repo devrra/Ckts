@@ -1,0 +1,61 @@
+# header information:
+HCurrentMirror|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D26.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+Tmocmos-cn|ScaleFORmocmos-cn()D65.0
+
+# Cell Wilson_CM;1{sch}
+CWilson_CM;1{sch}||schematic|1596792036638|1596792529310|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||5|5||||
+NOff-Page|conn@1||-12|5||||
+NGround|gnd@0||-3|-6||||
+NTransistor|nmos@0||0|0|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NTransistor|nmos@1||-7|0|||XR||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D2.0
+NWire_Pin|pin@0||-9|-4||||
+NWire_Pin|pin@1||2|-4||||
+NWire_Pin|pin@2||-9|3||||
+NWire_Pin|pin@3||-4|3||||
+NWire_Pin|pin@4||-4|0||||
+NWire_Pin|pin@5||2|5||||
+NWire_Pin|pin@6||-9|5||||
+Ngeneric:Invisible-Pin|pin@7||-28|11|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\65nm.cir",Vvdd vdd 0 1.2,Iref vdd d2 100u,Rl vdd d1 1k,.op]
+NPower|pwr@0||-3|12||||
+Awire|net@0|||900|nmos@1|s|-9|-2|pin@0||-9|-4
+Awire|net@1|||1800|pin@0||-9|-4|gnd@0||-3|-4
+Awire|net@2|||900|nmos@0|s|2|-2|pin@1||2|-4
+Awire|net@3|||1800|gnd@0||-3|-4|pin@1||2|-4
+Awire|net@5|||2700|nmos@1|d|-9|2|pin@2||-9|3
+Awire|net@6|||1800|pin@2||-9|3|pin@3||-4|3
+Awire|net@7|||1800|nmos@1|g|-6|0|pin@4||-4|0
+Awire|net@8|||1800|pin@4||-4|0|nmos@0|g|-1|0
+Awire|net@9|||900|pin@3||-4|3|pin@4||-4|0
+Awire|net@10|||2700|nmos@0|d|2|2|pin@5||2|5
+Awire|net@11|||2700|pin@2||-9|3|pin@6||-9|5
+Awire|net@12|||1800|pin@5||2|5|conn@0|a|3|5
+Awire|net@13|||1800|conn@1|y|-10|5|pin@6||-9|5
+Ed1||D5G2;|conn@0|y|U
+Ed2||D5G2;|conn@1|a|U
+X
+
+# Cell simple_CS;1{sch}
+Csimple_CS;1{sch}||schematic|1596781294563|1596781717484|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-4|0||||
+NOff-Page|conn@1||5|3||||
+NGround|gnd@0||2|-5||||
+NTransistor|nmos@0||0|0|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;X-2;)SNMOS
+Ngeneric:Invisible-Pin|pin@0||-14|6|||||SIM_spice_card(D5G1;)S[".include C:\\Users\\Yash Raj\\Documents\\electric\\65nm.cir",Vvdd vdd 0 1.2,R vdd d 1k,Vg g 0 0,.dc Vg 0 1.2 0.05]
+NWire_Pin|pin@1||2|3||||
+NPower|pwr@0||2|8||||
+Awire|net@0|||900|nmos@0|s|2|-2|gnd@0||2|-3
+Awire|net@1|||1800|conn@0|y|-2|0|nmos@0|g|-1|0
+Awire|net@3|||2700|nmos@0|d|2|2|pin@1||2|3
+Awire|net@4|||1800|pin@1||2|3|conn@1|a|3|3
+Ed||D5G2;|conn@1|y|U
+Eg||D5G2;|conn@0|a|U
+X

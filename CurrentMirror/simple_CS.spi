@@ -1,0 +1,22 @@
+*** SPICE deck for cell simple_CS{sch} from library CurrentMirror
+*** Created on Fri Aug 07, 2020 11:51:34
+*** Last revised on Fri Aug 07, 2020 11:58:37
+*** Written on Fri Aug 07, 2020 11:58:44 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: simple_CS{sch}
+Mnmos@0 d g gnd gnd NMOS L=0.065U W=1.3U
+
+* Spice Code nodes in cell cell 'simple_CS{sch}'
+.include C:\Users\Yash Raj\Documents\electric\65nm.cir
+Vvdd vdd 0 1.2
+Vg g 0 0.4
+
+.params Rres=1k
+R vdd d {Rres}
+.step param Rres 1 100 1
+.op
+.END
