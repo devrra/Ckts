@@ -9,7 +9,7 @@ Tmocmos|ScaleFORmocmos()D26.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
 Tmocmos-cn|ScaleFORmocmos-cn()D65.0
 
 # Cell Wilson_CM;1{sch}
-CWilson_CM;1{sch}||schematic|1596792036638|1596792529310|
+CWilson_CM;1{sch}||schematic|1596792036638|1596861596749|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||5|5||||
 NOff-Page|conn@1||-12|5||||

@@ -24,4 +24,6 @@ Iref vdd d2 {i}
 .step param i 10u 200u 10u
 
 .op
+
+.plot V(d2)  I(Rl)
 .END
